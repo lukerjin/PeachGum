@@ -10,7 +10,7 @@ function DisplayUnit ({href,src, alt, desc}) {
 	};
 
 	const imgStyle={
-		width: 400
+		width: "100%"
 	};
 
 	const descStyle={
