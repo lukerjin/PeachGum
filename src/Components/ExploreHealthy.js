@@ -1,32 +1,20 @@
 import React, { Component } from "react";
 import defaultImage from "../img/imgDefault.png";
+import "../CSS/ExploreHealthy.css";
+import explore1 from "../img/explore1.jpg";
+import explore2 from "../img/explore2.jpg";
+import explore3 from "../img/explore3.jpg";
 
 function DisplayUnit ({href,src, alt, desc}) {
-	const boxStyle={
-		margin:15,
-		border: "1px solid #E0E0E0",
-		display: "inline-block",
-	    borderRadius: 3
-	};
 
-	const imgStyle={
-		width: "100%"
-	};
-
-	const descStyle={
-		fontSize: 20,
-		padding: 30,
-		color: "#333",
-		fontWeight: 'bold'
-	};
-	
 	return (
-		<div style={boxStyle}>
+		<div className="boxContainer">
 			<a href={href}>
-				<img style={imgStyle} src={src} alt={alt} />
+				<div className="boxStyle">
+					<img className="imgStyle" src={src} alt={alt} />
+					<div className="descStyle">{desc}</div>
+				</div>
 			</a>
-			<div style={descStyle}>{desc}</div>
-			
 		</div>
 	);
 }
@@ -34,12 +22,12 @@ function DisplayUnit ({href,src, alt, desc}) {
 class ExploreHealthy extends Component {
 	render() {
 		return(
-			<div>
+			<div className="exploreContainer">
 				<h2>Explore Healthy</h2>
-				<div>
-					<DisplayUnit href="https://www.google.com.au" src={defaultImage} alt="Peach Gum Image" desc="Peach Gum" />
-					<DisplayUnit href="https://www.google.com.au" src={defaultImage} alt="Honey Locust Image" desc="Honey Locust" />
-					<DisplayUnit href="https://www.google.com.au" src={defaultImage} alt="Sonw Swallow Image" desc="Sonw Swallow" />
+				<div className="exploreBox">
+					<DisplayUnit href="https://www.google.com.au" src={explore1} alt="Peach Gum Image" desc="Peach Gum" />
+					<DisplayUnit href="https://www.google.com.au" src={explore2} alt="Honey Locust Image" desc="Honey Locust" />
+					<DisplayUnit href="https://www.google.com.au" src={explore3} alt="Sonw Swallow Image" desc="Sonw Swallow" />
 				</div>
 			</div>
 		);
